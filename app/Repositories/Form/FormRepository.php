@@ -20,7 +20,7 @@ class FormRepository implements FormRepositoryInterface
 
     public function getAllForms()
     {
-        return $this->form->with('inputs')->paginate();
+        return $this->form->with('inputs');
     }
 
     public function getFormById($id)

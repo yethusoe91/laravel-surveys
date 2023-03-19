@@ -16,7 +16,7 @@ class FormController extends Controller
     public function getAllForms(Request $request){
         $forms = $this->repo->getAllForms($request);
         
-        return FormResource::collection($forms);
+        return FormResource::collection($forms->paginate());
     } 
     
     public function createForm(FormCreateEditRequest $request){

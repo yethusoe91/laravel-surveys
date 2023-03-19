@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FrontendController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [FrontendController::class, 'forms'])->name('forms');
+Route::get('/form/{id}', [FrontendController::class, 'showForm'])->name('show.form');
+Route::post('/form-submit', [FrontendController::class, 'formSubmit'])->name('form.submit');
