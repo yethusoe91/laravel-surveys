@@ -7,5 +7,5 @@
 #### Public Form
 You can use Blade. UI can be simple.
 
-- [ ] Customer can submit a form depending on the form render.
-- [ ] After submitting the form, API has to send mail.
+- [x] Customer can submit a form depending on the form render.
+- [x] After submitting the form, API has to send mail.
